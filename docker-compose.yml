@@ -1,0 +1,12 @@
+version: '3:6'
+services:
+  java:
+    container_name: java
+    hostname: java
+    build: ./docker/java
+    ports:
+      - 8080:8080
+    tty: true
+    volumes:
+      - ./server/src:/usr/src:cached
+
